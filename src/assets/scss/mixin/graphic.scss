@@ -1,0 +1,25 @@
+@mixin full( $px: 0 ) {
+  /// Fully align an absolute element
+  /// @param {Boolean} $px - Padding(px) each side
+  position: absolute;
+  top: $px;
+  left: $px;
+  right: $px;
+  bottom: $px;
+}
+@mixin center( $x: true, $y: true ) {
+  /// Center an absolute element
+  position: absolute;
+  $posX: 0;
+  $posY: 0;
+  @if( $x ) {
+    left: 50%;
+    $posX: -50%;
+  }
+  @if( $y ) {
+    top: 50%;
+    $posY: -50%;
+  }
+  transform: translate( $posX, $posY );
+  @content;
+}

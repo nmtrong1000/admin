@@ -1,0 +1,77 @@
+@import "~@assets/scss/import.scss";
+
+:local {
+  .gnav {
+    position: relative;
+    padding: 10px 5px;
+    *::selection {
+      background-color: transparent;
+    }
+    li {
+      margin-bottom: 5px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+    a {
+      background-color: rgba( $clrDefaultLight, .3 );
+      @include flexbox( "flex-start", "center" );
+      border-radius: 7px;
+      width: 100%;
+      padding: 5px;
+      font-size: .9em;
+    }
+    &__active, a:hover {
+      background-color: rgba( $clrDefaultLight, .4 );
+    }
+    &__parent {
+      position: relative;
+      &:after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: 5px;
+        transform: translateY( -25% );
+        border-top: 5px solid;
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+      }
+    }
+    &__sub {
+      background-color: rgba( $clrDefaultLight, .3 );
+      border-radius: 5px;
+      margin-top: 5px;
+      padding: 5px;
+      a {
+        background-color: transparent;
+      }
+    }
+    &__icon {
+      background-color: rgba( $clrDefaultLight, .3 );
+      @include flexbox( "center", "center" );
+      margin-right: 10px;
+      min-width: 30px;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+    }
+    &__txt {
+      text-transform: uppercase;
+    }
+    &__min {
+      .gnav__txt {
+        display: none;
+      }
+      .gnav__sub {
+        // padding: 5px 0;
+        padding: 0;
+      }
+      .gnav__icon {
+        margin-right: 0;
+      }
+      .gnav__parent:after {
+        content: none;
+      }
+    }
+  }
+}

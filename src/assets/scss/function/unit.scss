@@ -1,0 +1,82 @@
+/// ------------------------------
+/// @name Calculator
+/// @alias calc
+/// ------------------------------
+
+@function stripUnit( $n ) {
+  /// 10px -> 10
+  @if type-of( $n ) == "number" and not unitless( $n ) {
+    @return $n / ( $n * 0 + 1 );
+  }
+  @return $n;
+}
+
+@function calcVw( $px, $base: 768 ) {
+  /// Convert px to vw (width viewport)
+  $px: stripUnit( $px );
+  $base: stripUnit( $base );
+
+  @if ( $px != 0 and $base != 0 ) {
+    @return #{ $px * 100 / $base }vw;
+  }
+  @return 0;
+}
+
+@function calcVh( $px, $base: 768 ) {
+  /// Convert px to vh (height viewport)
+  $px: stripUnit( $px );
+  $base: stripUnit( $base );
+
+  @if ( $px != 0 and $base != 0 ) {
+    @return #{ $px * 100 / $base }vh;
+  }
+  @return 0;
+}
+
+@function calcPercent( $px, $base: 1280 ) {
+  /// Convert px to %
+  $px: stripUnit( $px );
+  $base: stripUnit( $base );
+
+  @if ( $px != 0 and $base != 0 ) {
+    @return percentage( $px / $base );
+  }
+  @return 0;
+}
+
+@function calcRem( $px, $base: 14 ) {
+  /// Convert px to rem (font-size root element)
+  $px: stripUnit( $px );
+  $base: stripUnit( $base );
+
+  @if ( $px != 0 and $base != 0 ) {
+    @return #{ $px / $base }rem;
+  }
+  @return 0;
+}
+
+@function calcRem( $px, $base: 14 ) {
+  /// Convert px to em (font-size element)
+  $px: stripUnit( $px );
+  $base: stripUnit( $base );
+
+  @if ( $px != 0 and $base != 0 ) {
+    @return #{ $px / $base }em;
+  }
+  @return 0;
+}
+
+@function calcIn( $px ) {
+  /// Convert px to in (inches)
+  @return #{ stripUnit( $px ) / 96 }in;
+}
+
+@function calcPt( $px ) {
+  /// Convert px to pt (points)
+  @return #{ stripUnit( $px ) / 96 * 72 }pt;
+}
+
+@function calcPc( $px ) {
+  /// Convert px to pc (picas)
+  @return #{ stripUnit( $px ) / 96 * 72 / 12 }pc;
+}

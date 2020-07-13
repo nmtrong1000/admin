@@ -1,0 +1,26 @@
+/// ------------------------------
+/// @name Dimension
+/// @alias w width in pixel
+/// @alias h height in pixel
+/// ------------------------------
+
+/* Design Width */
+$wDesignPC: 1280px;
+$wDesignSP: 640px;
+
+/* Container Width */
+$wContainer: 1020px;
+
+/* Device Width - Breakpoints */
+$wDefault:1280px; /* Default */
+$wTabletLandscape:1024px; /* Tablet Landscape */
+$wTabletPortrait:768px; /* Tablet Portrait */
+$wSPMax: 414px; /* Smartphone Max Width */
+$wSPMin: 320px; /* Smartphone Min Width */
+
+/* Device Height */
+$hDefault: 720px; /* Default */
+$hTabletLandscape: 768px; /* Tablet Landscape */
+$hTabletPortrait: 1024px; /* Tablet Portrait */
+$hSPMax: 896px; /* Smartphone Max Height */
+$hSPMin: 568px; /* Smartphone Min Height */

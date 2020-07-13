@@ -1,0 +1,56 @@
+@import "~@assets/scss/import.scss";
+
+:local {
+  .index {
+    @include flexbox();
+    height: calc( 100vh - 50px );
+    overflow: hidden;
+    &__nav {
+      background-color: $clrDefaultDark;
+      color: $clrDefaultLight;
+      position: relative;
+      overflow: auto;
+      width: calcPercent( 280px );
+      height: calc( 100vh - 50px );
+    }
+    &__main {
+      overflow: auto;
+      width: calcPercent( 1000px );
+      height: calc( 100vh - 50px );
+    }
+    &__min {
+      position: relative;
+    }
+    &__btn {
+      @include flexbox( "center", "center" );
+      width: 20px;
+      height: 20px;
+      border: none;
+      margin-left: auto;
+      margin-top: 5px;
+      &:after {
+        content: "";
+        display: block;
+        border-top: 10px solid;
+        border-right: 10px solid transparent;
+        border-left: 10px solid transparent;
+        transform: rotate( 90deg ) translateY( -5px );
+      }
+    }
+    &__min {
+      .index__nav {
+        width: 50px;
+      }
+      .index__main {
+        width: calc( 100vw - 50px );
+      }
+      .index__btn {
+        // margin-left: 0;
+        // margin-right: auto;
+        // &:after {
+        //   transform: rotate( -90deg ) translateY( -5px );
+        // }
+      }
+    }
+  }
+}

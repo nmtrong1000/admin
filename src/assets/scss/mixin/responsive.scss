@@ -1,0 +1,44 @@
+// scss/lib/mixins/_responsive.scss
+
+@mixin mediaQuery( $maxWidth: null, $minWidth: null, $device: screen ) {
+  /// Media Query
+  @if ( $maxWidth != null and $minWidth != null ) {
+    /// Min and max
+    @media only #{ $device } and ( min-width: $minWidth ) and ( max-width: $maxWidth ) {
+      @content;
+    }
+  } @else if ( $minWidth != null and $maxWidth == null ) {
+    /// Min only
+    @media only #{ $device } and ( min-width: $minWidth ) {
+      @content;
+    }
+  } @else {
+    /// Max only
+    @media only #{ $device } and ( max-width: $maxWidth ) {
+      @content;
+    }
+  }
+}
+
+@mixin flexbox( $justify: flex-start, $align: stretch ) {
+  display: flex;
+  @if( $justify != flex-start ) {
+    justify-content: unquote( $justify );
+  }
+  @if( $align != stretch ) {
+    align-items: unquote( $align );
+  }
+  @content;
+}
+
+@mixin clearfix() {
+  /// Clear float
+  overflow: visible;
+	clear: both;
+	&:after {
+		content: "";
+		clear: both;
+		display: table;
+		@content;
+	}
+}

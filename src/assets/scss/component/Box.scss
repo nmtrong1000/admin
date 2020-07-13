@@ -1,0 +1,30 @@
+@import "~@assets/scss/import.scss";
+
+:local {
+  .box {
+    background: $clrDefaultLight;
+    // box-shadow: 0 3px 15px rgba( $clrDefaultDark, 0.08 );
+    &__margin {
+      &__regular {
+        margin: 20px;
+      }
+      &__small {
+        margin: 10px;
+      }
+      &__medium {
+        margin: 40px;
+      }
+    }
+    &__padding {
+      &__regular {
+        padding: 20px;
+      }
+      &__small {
+        padding: 10px;
+      }
+      &__medium {
+        padding: 40px;
+      }
+    }
+  }
+}

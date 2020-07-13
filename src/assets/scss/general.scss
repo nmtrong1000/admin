@@ -1,0 +1,19 @@
+@import 'import.scss';
+
+/* Reset CSS */
+@import 'reset.scss';
+
+/* To use font */
+@font-face {
+  font-family: "Quicksand";
+  src: url( "~@assets/font/quicksand/Quicksand-Regular.ttf" );
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Quicksand";
+  src: url( "~@assets/font/quicksand/Quicksand-SemiBold.ttf" );
+  font-weight: bold;
+}
+body {
+  font-family: "Quicksand", sans-serif;
+}

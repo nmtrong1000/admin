@@ -1,0 +1,15 @@
+@import "~@assets/scss/import.scss";
+
+:local {
+  .form {
+    &__label {
+      line-height: 40px;
+      font-size: 1.1em;
+    }
+    &__hint {
+      display: block;
+      font-size: .8em;
+      line-height: 30px;
+    }
+  }
+}

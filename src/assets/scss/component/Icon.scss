@@ -1,0 +1,18 @@
+@import "~@assets/scss/import.scss";
+
+:local {
+  .icon {
+    display: inline-block;
+    max-width: 100%;
+    &__nostroke {
+      path {
+        stroke: transparent !important;
+      }
+    }
+    &__nofill {
+      path {
+        fill: transparent !important;
+      }
+    }
+  }
+}

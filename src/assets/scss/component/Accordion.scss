@@ -1,0 +1,15 @@
+@import "~@assets/scss/import.scss";
+
+:local {
+  .accordion {
+    position: relative;
+    &__btn {
+      cursor: pointer;
+    }
+    &__content {
+      overflow: hidden;
+      transition: .4s cubic-bezier(0.075, 0.82, 0.165, 1);
+      height: 0;
+    }
+  }
+}

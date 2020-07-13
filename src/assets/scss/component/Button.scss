@@ -1,0 +1,75 @@
+@import "~@assets/scss/import.scss";
+
+@mixin fillButtonColor( $dark, $light ) {
+  background-color: $clrDefaultLight;
+  border-color: $dark;
+  color: $dark;
+  path {
+    stroke: $dark;
+    fill: $dark;
+  }
+  &:hover {
+    background-color: $dark;
+    border-color: $dark;
+    color: $light;
+    path {
+      stroke: $light;
+      fill: $light;
+    }
+  }
+}
+:local {
+  .button {
+    font-weight: bold;
+    transition: .2s cubic-bezier(0.645, 0.045, 0.355, 1);
+    @include flexbox( "center", "center" );
+    border: 2px solid;
+    padding: 0 10px;
+    line-height: 36px;
+    path {
+      transition: .2s cubic-bezier(0.645, 0.045, 0.355, 1);
+    }
+    &__prepend, &__append {
+      @include flexbox( "center", "center" );
+      min-width: 20px;
+    }
+    &__prepend {
+      border-right: 1px solid;
+      margin-right: 10px;
+      padding-right: 10px;
+    }
+    &__append {
+      border-left: 1px solid;
+      margin-left: 10px;
+      padding-left: 10px;
+    }
+    &__disabled {
+      opacity: .5;
+      pointer-events: none;
+    }
+    &__default {
+      @include fillButtonColor( $clrDefaultDark, $clrDefaultLight );
+    }
+    &__primary {
+      @include fillButtonColor( $clrPrimaryDark, $clrPrimaryLight );
+    }
+    &__secondary {
+      @include fillButtonColor( $clrSecondaryDark, $clrSecondaryLight );
+    }
+    &__success {
+      @include fillButtonColor( $clrSuccessDark, $clrSuccessLight );
+    }
+    &__danger {
+      @include fillButtonColor( $clrDangerDark, $clrDangerLight );
+    }
+    &__warning {
+      @include fillButtonColor( $clrWarningDark, $clrWarningLight );
+    }
+    &__info {
+      @include fillButtonColor( $clrInfoDark, $clrInfoLight );
+    }
+    &__muted {
+      @include fillButtonColor( $clrMutedDark, $clrMutedLight );
+    }
+  }
+}

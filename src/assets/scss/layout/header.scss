@@ -1,0 +1,21 @@
+@import "~@assets/scss/import.scss";
+
+:local {
+  .header {
+    border-bottom: 1px solid $clrMutedDark;
+    @include flexbox();
+    height: 50px;
+    &__logo {
+      background-color: black;
+      @include flexbox( "center", "center" );
+      max-width: calcPercent( 280px );
+      width: 100%;
+      img {
+        width: 110px;
+      }
+      &__min {
+        width: 50px;
+      }
+    }
+  }
+}

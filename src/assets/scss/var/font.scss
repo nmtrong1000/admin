@@ -1,0 +1,28 @@
+/// ------------------------------
+/// @name Font
+/// @alias fs font-size
+/// @alias fw font-weight
+/// @alias ff font-family
+/// ------------------------------
+
+/* Default font-size */
+$fsPC: 14px;
+$fsSP: 20px;
+
+/* Noto-sans font-weight */
+$fwThin:100;
+$fwLight:200;
+$fwDemilight:300;
+$fwRegular:400;
+$fwMedium:500;
+$fwBold:700;
+$fwBlack:900;
+
+/* Common font-family */
+$ffNoto: "Noto Sans JP", sans-serif;
+$ffKakugo: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", "Osaka", "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+$ffMarugo: "ヒラギノ丸ゴ Pro W4", "Hiragino maru Gothic Pro", "HG丸ｺﾞｼｯｸM-PRO","HGMaruGothicMPRO",sans-serif;
+$ffMincho: "游明朝", "YuMincho", "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
+$ffArial: "Arial", "Helvetica", sans-serif;
+$ffVerdana: "Verdana", "Geneva", sans-serif;
+$ffHelvetica: "Helvetica", sans-serif;
